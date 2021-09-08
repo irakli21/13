@@ -1,0 +1,40 @@
+@import '../modules/variable.scss';
+
+
+
+@mixin display ($property) {
+    display : $property;
+}
+
+@mixin flex-property ($justify, $align) {
+    justify-content: $justify;
+    align-items: $align ;
+}
+@mixin background ($bg-size, $bg-repeat,$bg-position) {
+    background-size: $bg-size;
+    background-repeat: $bg-repeat;
+    background-position: $bg-position;
+}
+
+
+@mixin absolute ($top, $left) {
+    top :$top;
+    left: $left;
+}
+
+
+@mixin position ($property) {
+    position: $property;
+
+}
+
+
+@mixin width ($size) {
+    @if($size == $size01) {
+        background : $color01;
+    }@else if ($size == $size02) {
+        backround : $color02;
+    }@else {
+        background: $color03;
+    }
+}

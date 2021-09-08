@@ -1,3 +1,35 @@
+@import '../modules/variable.scss';
+@import '../modules/mixins.scss';
+@import '../modules/clasess.scss';
 body {
-    background-color:black;
+    background-color: $color02;
+        @include background (cover, no-repeat, center);
+        @include display(flex);
+        @include flex-property (space-between, flex-start);
+        @media (max-width: 1024px) {
+            @include flex-property (center, center);
+        }
+    .box {
+        @extend %title;
+        @include width (100px);
+        height: $size02;
+        @include position (absolute);
+        @include absolute ( 50px, 120px);
+        & :last-child {
+            width :20px
+        }
+        & :hover {
+            background: $color03;
+        }
+        @media (max-width: 1024px) {
+            @include width (600px);
+        }
+        @media (max-width: 480px) {
+            @include width (200px);
+        }
+    }
+
+
 }
+
+

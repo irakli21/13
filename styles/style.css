@@ -43,6 +43,59 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body .box {
+  color: red;
+  font-size: 24px;
+}
+
+body .box {
+  color: red;
+  font-size: 24px;
+}
+
 body {
-  background-color: black;
+  background-color: blue;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media (max-width: 1024px) {
+  body {
+    justify-content: center;
+    align-items: center;
+  }
+}
+body .box {
+  background: red;
+  height: 20px;
+  position: absolute;
+  top: 50px;
+  left: 120px;
+}
+body .box :last-child {
+  width: 20px;
+}
+body .box :hover {
+  background: green;
+}
+@media (max-width: 1024px) {
+  body .box {
+    background: green;
+  }
+}
+@media (max-width: 480px) {
+  body .box {
+    background: green;
+  }
 }
